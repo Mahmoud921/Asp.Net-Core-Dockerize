@@ -4,7 +4,7 @@ WORKDIR /source
 
 COPY *.csproj .
 
-RUN dotnet restore
+RUN dotnet restore dockerapp.csproj
 
 # copy and publish application file
 
