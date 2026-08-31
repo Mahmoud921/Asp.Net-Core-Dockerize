@@ -9,7 +9,7 @@ RUN dotnet restore
 # copy and publish application file
 
 COPY . .
-RUN dotnet publish -c release -o /app
+RUN dotnet publish dockerapp.csproj -c release -o /app
 
 # final stage
 FROM mcr.microsoft.com/dotnet/aspnet:10.0
